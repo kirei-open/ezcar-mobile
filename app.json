@@ -1,0 +1,61 @@
+{
+  "expo": {
+    "name": "ezcar-mobile",
+    "slug": "ezcar-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/logo.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#f5f5f5"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "id.carez",
+      "icon": "./assets/logo-ios.png",
+      "config": {
+        "googleMapsApiKey": "AIzaSyCmMX9Hs91NtYSqFsKT5ws6AIaqumszAIM"
+      },
+      "splash": {
+        "backgroundColor": "#f5f5f5"
+      },
+      "infoPlist": {
+        "NSLocationAlwaysUsageDescription" : "Your current location will be displayed on the map and used for directions, nearby search results, and estimated travel times",
+        "NSLocationWhenInUseUsageDescription" : "Your current location will be displayed on the map and used for directions, nearby search results, and estimated travel times",
+        "NSAppTransportSecurity" : {
+          "NSAllowsArbitraryLoads" : true,
+          "NSAllowsArbitraryLoadsForMedia": true, 
+          "NSAllowsArbitraryLoadsInWebContent": true, 
+          "NSExceptionAllowsInsecureHTTPLoads": true
+        }
+      }
+    },
+    "android": {
+      "package": "id.carez",
+      "versionCode": 8,
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyCmMX9Hs91NtYSqFsKT5ws6AIaqumszAIM"          
+        }
+      },
+      "backgroundColor": "#f5f5f5",
+      "googleServicesFile": "./google-services.json"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "notification": {
+      "icon": "./assets/logo.png",
+      "color": "#3369e7",
+      "androidMode": "collapse",
+      "androidCollapsedTitle": "#{unread_notifications} new notifications"
+    }
+  }
+}

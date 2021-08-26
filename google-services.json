@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "353625885774",
+    "firebase_url": "https://ezcar-206000.firebaseio.com",
+    "project_id": "ezcar-206000",
+    "storage_bucket": "ezcar-206000.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:353625885774:android:5c41d308d237a7a7",
+        "android_client_info": {
+          "package_name": "id.carez"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "353625885774-1459lrfm7373jr5di920h0eni12d12j4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxRe5xCmddl4wqUuwr2LUwQPQHnQk99qM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

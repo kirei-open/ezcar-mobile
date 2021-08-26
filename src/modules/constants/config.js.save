@@ -1,0 +1,42 @@
+// const devMode = process.env.NODE_ENV !== 'development';
+const urlApi = () => {
+  if (process.env.REACT_APP_START_WEB) {
+    return process.env.NODE_ENV === 'development'
+      ? 'http://eztruk.com:3001'
+      : 'https://eztruck.byme';
+  }
+  return 'http://eztruk.com:3001/api'; // 'https://e40823c6.ngrok.io';
+};
+
+const socketUrl = () => {
+  if (process.env.REACT_APP_START_WEB) {
+    return process.env.NODE_ENV === 'development'
+      ? 'http://eztruk.com:3001'
+      : 'https://eztruck.byme.tech';
+  }
+
+  return 'http://eztruk.com:3001'; // 'https://e40823c6.ngrok.io';
+};
+
+const socketPath = () => {
+  if (process.env.REACT_APP_START_WEB) {
+    return process.env.NODE_ENV === 'development'
+      ? '/socket.io'
+      : '/api/socket.io';
+  }
+
+  return '/api/socket.io';
+};
+
+export default {
+  appName: 'Eztruck',
+  description: 'Eztruck Application',
+  api: urlApi(),
+  socket: {
+    url: socketUrl(),
+    path: socketPath()
+  },
+  tokenName: 'eztruck_t',
+  googleApiKey: 'AIzaSyArUnNN0HNHrQy366iDSHDXFqV8zmqM5XA',
+  googleApiMobile: 'AIzaSyCi90T9cF6yNVAe0RuCIsUfWGXGtq6WPjs'
+};
