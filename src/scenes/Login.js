@@ -110,7 +110,7 @@ class Login extends React.Component {
       <View style={{backgroundColor: "#e9e9ef"}}>
         {!loaded ? (
           <View>
-            <Image source={require('../../assets/logo.png')} style={style.imageContainer} />
+            <Image source={require('../../assets/logo-new.png')} style={style.imageContainer} />
             <Form style={style.form}>
               <Item regular style={style.formGroup}>
                 <Icon active name="ios-person-outline" />
