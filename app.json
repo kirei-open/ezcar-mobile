@@ -4,11 +4,11 @@
     "slug": "ezcar-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/logo.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#f5f5f5"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -17,16 +17,45 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "id.carez",
+      "icon": "./assets/logo-ios.png",
+      "config": {
+        "googleMapsApiKey": "AIzaSyB_HIpyugMy5hwgEoWV7_iFlBLf5obJnOs"
+      },
+      "splash": {
+        "backgroundColor": "#f5f5f5"
+      },
+      "infoPlist": {
+        "NSLocationAlwaysUsageDescription": "Your current location will be displayed on the map and used for directions, nearby search results, and estimated travel times",
+        "NSLocationWhenInUseUsageDescription": "Your current location will be displayed on the map and used for directions, nearby search results, and estimated travel times",
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true,
+          "NSAllowsArbitraryLoadsForMedia": true,
+          "NSAllowsArbitraryLoadsInWebContent": true,
+          "NSExceptionAllowsInsecureHTTPLoads": true
+        }
+      }
     },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
+      "package": "id.carez",
+      "versionCode": 8,
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyB_HIpyugMy5hwgEoWV7_iFlBLf5obJnOs"
+        }
+      },
+      "backgroundColor": "#f5f5f5",
+      "googleServicesFile": "./google-services.json"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "notification": {
+      "icon": "./assets/logo.png",
+      "color": "#3369e7",
+      "androidMode": "collapse",
+      "androidCollapsedTitle": "#{unread_notifications} new notifications"
     }
   }
 }
