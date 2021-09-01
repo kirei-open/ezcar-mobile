@@ -16,26 +16,30 @@ import {
   Title,
   Toast
 } from 'native-base';
-import { View, StyleSheet, Image, Alert } from 'react-native';
+import { View, StyleSheet, Image, Alert, SafeAreaView, KeyboardAvoidingView, TouchableWithoutFeedback, ScrollView, Platform, Dimensions } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from 'axios';
 
 const style = StyleSheet.create({
   imageContainer: {
-    alignItems: 'center',
-    justifyContent: 'center',
+    // alignItems: 'center',
+    // justifyContent: 'center',
     resizeMode: 'center',
     height: 150,
-    width: '100%'
+    width: '100%',
+    marginBottom: 40,
   },
   form: {
-    marginTop: 20
+    marginTop: 10,
+    marginBottom: 10
   },
   formGroup: {
     marginBottom: 10
   }
 });
+
+const height = Dimensions.get('window').height;
 
 class Login extends React.Component {
   constructor(props) {
@@ -107,38 +111,40 @@ class Login extends React.Component {
     // }
 
     return (
-      <View style={{backgroundColor: "#e9e9ef"}}>
-        {!loaded ? (
-          <View>
-            <Image source={require('../../assets/logo-new.png')} style={style.imageContainer} />
-            <Form style={style.form}>
-              <Item regular style={style.formGroup}>
-                <Icon active name="ios-person-outline" />
-                <Input
-                  autoCapitalize="none"
-                  placeholder="Username or email"
-                  value={this.state.identity}
-                  onChangeText={identity => this.setState({ identity })}
-                />
-              </Item>
-              <Item regular style={style.formGroup}>
-                <Icon active name="lock-closed-outline" />
-                <Input
-                  secureTextEntry
-                  placeholder="Password"
-                  value={this.state.password}
-                  onChangeText={password => this.setState({ password })}
-                />  
-              </Item>
-            </Form>
-            <Button block primary onPress={() => this.submitForm()}>
-              {loading ? <Spinner color="white" /> : <Text>Login</Text>}
-            </Button>
-          </View>
-        ) : (
-          <Spinner />
-        )}
-      </View>
+      <SafeAreaView style={{backgroundColor: "#e9e9ef", flex: 1, justifyContent: 'center'}}>
+          {!loaded ? (
+          <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
+            <ScrollView style={{paddingHorizontal: 30}}>
+              <Image source={require('../../assets/logo-new.png')} style={style.imageContainer} />
+              <Form style={style.form}>
+                <Item regular style={style.formGroup}>
+                  <Icon active name="ios-person-outline" />
+                  <Input
+                    autoCapitalize="none"
+                    placeholder="Username or email"
+                    value={this.state.identity}
+                    onChangeText={identity => this.setState({ identity })}
+                  />
+                </Item>
+                <Item regular style={style.formGroup}>
+                  <Icon active name="lock-closed-outline" />
+                  <Input
+                    secureTextEntry
+                    placeholder="Password"
+                    value={this.state.password}
+                    onChangeText={password => this.setState({ password })}
+                  />  
+                </Item>
+              </Form>
+              <Button block primary onPress={() => this.submitForm()}>
+                {loading ? <Spinner color="white" /> : <Text>Login</Text>}
+              </Button>
+            </ScrollView>
+          </KeyboardAvoidingView>
+          ) : (
+            <Spinner />
+          )}
+        </SafeAreaView>
     );
   }
 }
