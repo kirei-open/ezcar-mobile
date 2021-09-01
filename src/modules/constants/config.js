@@ -15,15 +15,15 @@ const environment = () => {
     socketUrl = 'https://apicar.eztruk.com';
   
     let socketPath = '/api/socket.io';
-    let googleApiKey = 'AIzaSyCmMX9Hs91NtYSqFsKT5ws6AIaqumszAIM';
-    let googleApiMobile = 'AIzaSyCmMX9Hs91NtYSqFsKT5ws6AIaqumszAIM';
+    let googleApiKey = 'AIzaSyB_HIpyugMy5hwgEoWV7_iFlBLf5obJnOs';
+    let googleApiMobile = 'AIzaSyB_HIpyugMy5hwgEoWV7_iFlBLf5obJnOs';
     switch (domainToSearch) {
       case 'ezcar|id': {
         urlApi = 'https://apicar.eztruk.com';
         socketUrl = 'https://apicar.eztruk.com';
         socketPath = '/socket.io';
-        googleApiKey = 'AIzaSyCmMX9Hs91NtYSqFsKT5ws6AIaqumszAIM';
-        googleApiMobile = 'AIzaSyCmMX9Hs91NtYSqFsKT5ws6AIaqumszAIM';
+        googleApiKey = 'AIzaSyB_HIpyugMy5hwgEoWV7_iFlBLf5obJnOs';
+        googleApiMobile = 'AIzaSyB_HIpyugMy5hwgEoWV7_iFlBLf5obJnOs';
         break;
       }
       case 'eztruck|tech': {
