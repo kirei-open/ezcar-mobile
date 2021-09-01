@@ -21,7 +21,7 @@
       "bundleIdentifier": "id.carez",
       "icon": "./assets/logo-ios.png",
       "config": {
-        "googleMapsApiKey": "AIzaSyCmMX9Hs91NtYSqFsKT5ws6AIaqumszAIM"
+        "googleMapsApiKey": "AIzaSyB_HIpyugMy5hwgEoWV7_iFlBLf5obJnOs"
       },
       "splash": {
         "backgroundColor": "#f5f5f5"
@@ -42,7 +42,7 @@
       "versionCode": 8,
       "config": {
         "googleMaps": {
-          "apiKey": "AIzaSyCmMX9Hs91NtYSqFsKT5ws6AIaqumszAIM"          
+          "apiKey": "AIzaSyB_HIpyugMy5hwgEoWV7_iFlBLf5obJnOs"          
         }
       },
       "backgroundColor": "#f5f5f5",
