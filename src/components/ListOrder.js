@@ -105,7 +105,8 @@ class ListOrder extends PureComponent {
         limit: listLimit,
         checkType: listCheckType
       };
-      const url = 'https://apicar.eztruk.com/order?page='+queryList.page+'&limit='+queryList.limit+'&q=&sort='+queryList.sort+'&checkType='+queryList.checkType
+      // const url = 'https://apicar.eztruk.com/order?page='+queryList.page+'&limit='+queryList.limit+'&q=&sort='+queryList.sort+'&checkType='+queryList.checkType
+      const url = 'https://apicar.eztruk.com/order?page='+queryList.page+'&limit='+queryList.limit+'&q=&sort=-createdAt&checkType='+queryList.checkType
       this.getListOrder(url);
       // this.props.getOrderList(queryList);
     } else {
