@@ -106,8 +106,8 @@ class ListOrder extends PureComponent {
         checkType: listCheckType
       };
       const url = 'https://apicar.eztruk.com/order?page='+queryList.page+'&limit='+queryList.limit+'&q=&sort='+queryList.sort+'&checkType='+queryList.checkType
-      // this.getListOrder(url);
-      this.props.getOrderList(queryList);
+      this.getListOrder(url);
+      // this.props.getOrderList(queryList);
     } else {
       this.setState({
         refreshing: false,
@@ -128,6 +128,7 @@ class ListOrder extends PureComponent {
       const orders = listOrder.data.data.order
       this.setState({ orders })
     } catch (err) {
+      this.setState({ orders: []})
       console.log(err.response)
     }
   }

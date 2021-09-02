@@ -39,7 +39,7 @@
     },
     "android": {
       "package": "id.carez",
-      "versionCode": 8,
+      "versionCode": 9,
       "config": {
         "googleMaps": {
           "apiKey": "AIzaSyB_HIpyugMy5hwgEoWV7_iFlBLf5obJnOs"          
